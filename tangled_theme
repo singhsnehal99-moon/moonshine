@@ -1,0 +1,89 @@
+/* Tangled Theme CSS */
+
+:root {
+  --primary: #a678d6;       /* lavender purple */
+  --secondary: #f7c948;     /* golden glow */
+  --accent: #ff9ecb;        /* soft pink */
+  --background: #fff8f0;    /* warm cream */
+  --text: #4a2c2a;          /* soft brown */
+  --highlight: #fff3b0;     /* lantern light */
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', 'Georgia', serif;
+  background: linear-gradient(180deg, var(--background), #ffe8d6);
+  color: var(--text);
+}
+
+/* Header */
+header {
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  color: white;
+  padding: 1.5rem;
+  text-align: center;
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+/* Buttons */
+button {
+  background: var(--secondary);
+  border: none;
+  padding: 0.7rem 1.4rem;
+  border-radius: 25px;
+  color: #5a3e1b;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: var(--highlight);
+  transform: scale(1.05);
+}
+
+/* Cards */
+.card {
+  background: white;
+  border-radius: 15px;
+  padding: 1.5rem;
+  margin: 1rem;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  border: 2px solid var(--accent);
+}
+
+/* Links */
+a {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+a:hover {
+  color: var(--secondary);
+}
+
+/* Magical glow effect */
+.glow {
+  box-shadow: 0 0 15px var(--secondary),
+              0 0 30px var(--highlight);
+}
+
+/* Lantern animation */
+@keyframes floatLantern {
+  0% { transform: translateY(0px); opacity: 0.9; }
+  50% { transform: translateY(-20px); opacity: 1; }
+  100% { transform: translateY(0px); opacity: 0.9; }
+}
+
+.lantern {
+  width: 20px;
+  height: 30px;
+  background: var(--highlight);
+  border-radius: 50%;
+  animation: floatLantern 4s ease-in-out infinite;
+  margin: 10px auto;
+}
