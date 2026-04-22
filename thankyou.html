@@ -1,14 +1,60 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Thank you</title>
-    <link rel="stylesheet" href="tangled.css" />
-  </head>
-  <body>
-    <div class="lantern glow"><b>Thank you</b></div>
-      <p><img src="thankyou.gif" class="responsive" style=" width: 100px;height: 250px; margin: 20px auto"/></p>
+<body style="
+  margin:0;
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  background: linear-gradient(#fff8f0, #ffe8d6);
+  font-family: Georgia, serif;
+  text-align:center;
+  overflow:hidden;
+">
 
-  </body>
-</html>
+  <h1 style="color:#a678d6;">
+    Will you be my girlfriend?
+  </h1>
+
+  <button onclick="celebrate()" style="
+    padding:12px 25px;
+    font-size:18px;
+    border:none;
+    border-radius:25px;
+    background:#f7c948;
+    cursor:pointer;
+    margin-top:20px;
+  ">
+    YES 💖
+  </button>
+
+  <!-- Celebration message -->
+  <div id="message" style="display:none; margin-top:25px;">
+    <h2 style="color:#ff9ecb;">
+      You just made me the happiest person ✨
+    </h2>
+
+    <!-- THANK YOU NOTE -->
+    <p style="
+      max-width:400px;
+      color:#4a2c2a;
+      font-size:16px;
+      margin-top:15px;
+      line-height:1.6;
+    ">
+      Thank you for saying yes.  
+      I don’t take this lightly, and I’m really grateful for you.  
+      I promise to always care about you, make you smile, and be someone you can trust. 💛
+    </p>
+
+    <p style="color:#a678d6; margin-top:10px;">
+      I see the light… and it’s you ✨
+    </p>
+  </div>
+
+  <!-- hidden music -->
+  <iframe 
+    id="music" src="https://www.youtube.com/embed/ILRs2r6lcHY?autoplay=1&start=154"
+    style="display:none;">
+  </iframe>
+
+</body>
