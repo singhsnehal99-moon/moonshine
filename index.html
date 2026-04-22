@@ -12,26 +12,9 @@
     <img src="tangeld.gif.gif" alt="don't freak out" class="responsive" />
     </div>
     <div class="card">
-    <p><b>Will you be my girlfriend?</p>
-    <button onclick="location.href='thankyou.html'">
-      Yes
+   <button onclick="location.href='thankyou.html'">
+      Next
     </button>
-    <button class="answerButton" id="noButton">I no no wanna (╥﹏╥)</button>
-    <p><img src="duang_please.gif" alt="pleaseee" class="responsive" /></p>
-
-    <script>
-      document
-        .getElementById("noButton")
-        .addEventListener("click", function () {
-          var yesButton = document.querySelector(
-            'button[onclick*="thankyou.html"]'
-          );
-          var currentFontSize = parseInt(
-            window.getComputedStyle(yesButton).fontSize
-          );
-          yesButton.style.fontSize = currentFontSize + 10 + "px"; // Increase font size by 5px
-        });
-    </script>
     </div>  
   </body>
 </html>
