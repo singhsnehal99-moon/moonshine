@@ -40,5 +40,6 @@ function celebrate() {
 
   // 🎵 play "I See the Light" at 2:34 (154s)
   const music = document.getElementById("music");
-  music.src = "https://www.youtube.com/embed/ILRs2r6lcHY?autoplay=1&start=154";
+  music.src =
+    "https://www.youtube.com/embed/ILRs2r6lcHY?start=154&autoplay=1&enablejsapi=1&playsinline=1";
 }
