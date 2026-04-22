@@ -1,76 +1,74 @@
-<body style="
-  margin:0;
-  height:100vh;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-  background: linear-gradient(#fff8f0, #ffe8d6);
-  font-family: Georgia, serif;
-  text-align:center;
-  overflow:hidden;
-">
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Will you be my girlfriend?</title>
 
-  <h1 style="color:#a678d6;">
-    Will you be my girlfriend?
-  </h1>
+  <style>
+    body {
+      text-align: center;
+      margin-top: 100px;
+      font-family: Georgia, serif;
+      background: #fff8f0;
+      overflow: hidden;
+    }
 
-  <button onclick="celebrate()" style="
-    padding:12px 25px;
-    font-size:18px;
-    border:none;
-    border-radius:25px;
-    background:#f7c948;
-    cursor:pointer;
-    margin-top:20px;
-  ">
-    YES 💖
-  </button>
-      <button class="answerButton" id="noButton">I no no wanna (╥﹏╥)</button>
-    <p><img src="duang_please.gif" alt="pleaseee" class="responsive" /></p>
+    button {
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      margin: 10px;
+      transition: all 0.3s ease;
+    }
 
-    <script>
-      document
-        .getElementById("noButton")
-        .addEventListener("click", function () {
-          var yesButton = document.querySelector(
-            'button[onclick*="thankyou.html"]'
-          );
-          var currentFontSize = parseInt(
-            window.getComputedStyle(yesButton).fontSize
-          );
-          yesButton.style.fontSize = currentFontSize + 10 + "px"; // Increase font size by 5px
-        });
-    </script>
+    #yesBtn {
+      background: #f7c948;
+      font-size: 18px;
+      padding: 12px 25px;
+    }
 
-  <!-- Celebration message -->
-  <div id="message" style="display:none; margin-top:25px;">
-    <h2 style="color:#ff9ecb;">
-      You just made me the happiest person ✨
-    </h2>
+    #noBtn {
+      background: #ff9ecb;
+      font-size: 18px;
+      padding: 12px 25px;
+    }
 
-    <!-- THANK YOU NOTE -->
-    <p style="
-      max-width:400px;
-      color:#4a2c2a;
-      font-size:16px;
-      margin-top:15px;
-      line-height:1.6;
-    ">
+    #message {
+      display: none;
+      margin-top: 30px;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    p {
+      line-height: 1.6;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Will you be my girlfriend?</h1>
+
+  <button id="yesBtn" onclick="celebrate()">YES 💖</button>
+  <button id="noBtn" onclick="growYes()">NO 💔</button>
+
+  <div id="message">
+    <h2>You said YES 💖</h2>
+
+    <p>I see the light… and it’s you ✨</p>
+
+    <p>
       Thank you for saying yes.  
       I don’t take this lightly, and I’m really grateful for you.  
       I promise to always care about you, make you smile, and be someone you can trust. 💛
     </p>
-
-    <p style="color:#a678d6; margin-top:10px;">
-      I see the light… and it’s you ✨
-    </p>
   </div>
 
   <!-- hidden music -->
-  <iframe 
-    id="music" src="https://www.youtube.com/embed/ILRs2r6lcHY?autoplay=1&start=154"
-    style="display:none;">
-  </iframe>
+  <iframe id="music" style="display:none;"></iframe>
+
+  <script src="script.js"></script>
 
 </body>
+</html>
